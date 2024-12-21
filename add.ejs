@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add New Contact</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        padding: 0;
+        background-color: #f4f4f9;
+      }
+
+      h1 {
+        color: #333;
+        text-align: center;
+      }
+
+      form {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      label {
+        display: block;
+        margin-bottom: 15px;
+        font-size: 1em;
+        color: #555;
+      }
+
+      input {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        font-size: 1em;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+      }
+
+      button {
+        display: block;
+        width: 100%;
+        background-color: #007bff;
+        color: white;
+        font-size: 1em;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      a {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        color: #007bff;
+        text-decoration: none;
+        font-size: 1em;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Add New Contact</h1>
+    <form action="/add" method="POST">
+      <label>
+        Name:
+        <input type="text" name="name" required />
+      </label>
+      <label>
+        Phone Number:
+        <input type="text" name="phone_number" />
+      </label>
+      <label>
+        Email:
+        <input type="email" name="email" />
+      </label>
+      <button type="submit">Add Contact</button>
+    </form>
+    <a href="/">Back to Contacts</a>
+  </body>
+</html>

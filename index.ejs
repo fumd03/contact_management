@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Management System</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        padding: 0;
+        background-color: #f4f4f9;
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      a {
+        color: #007bff;
+        text-decoration: none;
+        margin-right: 10px;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 10px;
+        background-color: #ffffff;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      button {
+        background-color: #dc3545;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #c82333;
+      }
+
+      form {
+        display: inline;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Contact List</h1>
+    <a href="/add">Add New Contact</a>
+    <ul>
+      <% contacts.forEach(contact => { %>
+      <li>
+        <span>
+          <a href="/contact/<%= contact.id %>"><%= contact.name %></a>
+          <a href="/edit/<%= contact.id %>">Edit</a>
+        </span>
+        <form action="/delete/<%= contact.id %>" method="POST">
+          <button type="submit">Delete</button>
+        </form>
+      </li>
+      <% }) %>
+    </ul>
+  </body>
+</html>

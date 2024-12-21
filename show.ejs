@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Details</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        padding: 0;
+        background-color: #f4f4f9;
+      }
+
+      h1 {
+        color: #333;
+        text-align: center;
+      }
+
+      p {
+        font-size: 1.1em;
+        color: #555;
+        margin: 10px 0;
+      }
+
+      a {
+        display: inline-block;
+        margin-top: 20px;
+        color: #007bff;
+        text-decoration: none;
+        font-size: 1em;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Contact Details</h1>
+      <p>
+        <strong>Name:</strong>
+        <%= contact.name %>
+      </p>
+      <p>
+        <strong>Phone:</strong>
+        <%= contact.phone_number %>
+      </p>
+      <p>
+        <strong>Email:</strong>
+        <%= contact.email %>
+      </p>
+      <a href="/">Back to Contacts</a>
+    </div>
+  </body>
+</html>
